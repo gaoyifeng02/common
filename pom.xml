@@ -5,10 +5,10 @@
 
     <groupId>com.gaoyifeng</groupId>
     <artifactId>commom</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>commom</name>
     <description>sso for project</description>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>11</java.version>
