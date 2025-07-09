@@ -1,4 +1,4 @@
-package com.gaoyifeng.commom;
+package com.gaoyifeng.common;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

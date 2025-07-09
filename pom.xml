@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gaoyifeng</groupId>
-    <artifactId>commom</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
-    <name>commom</name>
-    <description>sso for project</description>
+    <artifactId>common</artifactId>
+    <version>0.0.4-SNAPSHOT</version>
+    <name>common</name>
+    <description>common for project</description>
     <packaging>jar</packaging>
 
     <properties>
