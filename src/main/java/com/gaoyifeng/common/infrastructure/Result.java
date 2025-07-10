@@ -44,14 +44,37 @@ public class Result<T> implements Serializable {
         return new Result<>(ResultCode._200.getCode(), ResultCode._200.getInfo(), null);
     }
 
-    /**
-     * 创建失败结果，使用400错误码
-     *
-     * @return 失败的结果对象
-     */
-    public static <T> Result<T> fail() {
-        return new Result<>(ResultCode._400.getCode(), ResultCode._400.getInfo(), null);
-    }
+      /**
+       * 创建失败结果，使用400错误码
+       *
+       * @param data 返回的数据
+       * @param <T>  数据类型
+       * @return 失败的结果对象
+       */
+      public static <T> Result<T> fail(T data) {
+          return new Result<>(ResultCode._400.getCode(), ResultCode._400.getInfo(), data);
+      }
+
+      /**
+       * 创建失败结果，使用400错误码
+       *
+       * @param <T> 数据类型
+       * @return 失败的结果对象
+       */
+      public static <T> Result<T> fail() {
+          return new Result<>(ResultCode._400.getCode(), ResultCode._400.getInfo(), null);
+      }
+
+      /**
+       * 创建失败结果，使用400错误码和自定义消息
+       *
+       * @param message 错误消息
+       * @param <T> 数据类型
+       * @return 失败的结果对象
+       */
+      public static <T> Result<T> fail(String message) {
+          return new Result<>(ResultCode._400.getCode(), message, null);
+      }
 
     /**
      * 创建成功结果，自定义消息

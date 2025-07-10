@@ -5,7 +5,7 @@
 
     <groupId>com.gaoyifeng</groupId>
     <artifactId>common</artifactId>
-    <version>0.0.4-SNAPSHOT</version>
+    <version>0.0.5-SNAPSHOT</version>
     <name>common</name>
     <description>common for project</description>
     <packaging>jar</packaging>
