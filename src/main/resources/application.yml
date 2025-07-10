@@ -1,2 +1,9 @@
 server:
   port: 10001
+
+jwt:
+  secret: "ssoJWTSecret"
+  expiration: 3600
+  header: "Authorization"
+  token-start-with: "Bearer "
+  base64-secret: "c3NvSldUU2VjcmV0"
