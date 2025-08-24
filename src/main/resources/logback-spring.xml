@@ -2,7 +2,7 @@
 <configuration>
     <!-- 定义日志文件的存储地址 -->
     <property name="LOG_HOME" value="./logs" />
-    
+
     <!-- 控制台输出 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -11,7 +11,7 @@
             <charset>UTF-8</charset>
         </encoder>
     </appender>
-    
+
     <!-- 按照每天生成日志文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -34,7 +34,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-    
+
     <!-- 错误日志文件 -->
     <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
@@ -57,7 +57,7 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-    
+
     <!-- 异步输出 -->
     <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
         <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
@@ -67,7 +67,7 @@
         <!-- 添加附加的appender,最多只能添加一个 -->
         <appender-ref ref="FILE"/>
     </appender>
-    
+
     <appender name="ASYNC_ERROR_FILE" class="ch.qos.logback.classic.AsyncAppender">
         <!-- 不丢失日志.默认的,如果队列的80%已满,则会丢弃TRACT、DEBUG、INFO级别的日志 -->
         <discardingThreshold>0</discardingThreshold>
@@ -76,7 +76,7 @@
         <!-- 添加附加的appender,最多只能添加一个 -->
         <appender-ref ref="ERROR_FILE"/>
     </appender>
-    
+
     <!-- 开发环境配置 -->
     <springProfile name="dev">
         <root level="DEBUG">
@@ -85,7 +85,7 @@
             <appender-ref ref="ASYNC_ERROR_FILE" />
         </root>
     </springProfile>
-    
+
     <!-- 测试环境配置 -->
     <springProfile name="test">
         <root level="INFO">
@@ -94,7 +94,7 @@
             <appender-ref ref="ASYNC_ERROR_FILE" />
         </root>
     </springProfile>
-    
+
     <!-- 生产环境配置 -->
     <springProfile name="prod">
         <root level="INFO">
@@ -102,7 +102,7 @@
             <appender-ref ref="ASYNC_ERROR_FILE" />
         </root>
     </springProfile>
-    
+
     <!-- 默认配置 -->
     <springProfile name="!dev &amp;&amp; !test &amp;&amp; !prod">
         <root level="INFO">
@@ -111,24 +111,24 @@
             <appender-ref ref="ASYNC_ERROR_FILE" />
         </root>
     </springProfile>
-    
+
     <!-- 特定包的日志级别配置 -->
     <logger name="com.gaoyifeng" level="DEBUG" additivity="false">
         <appender-ref ref="CONSOLE" />
         <appender-ref ref="ASYNC_FILE" />
         <appender-ref ref="ASYNC_ERROR_FILE" />
     </logger>
-    
+
     <!-- Spring框架日志级别 -->
     <logger name="org.springframework" level="INFO" />
-    
+
     <!-- Hibernate日志级别 -->
     <logger name="org.hibernate" level="INFO" />
-    
+
     <!-- MyBatis日志级别 -->
     <logger name="org.mybatis" level="INFO" />
-    
+
     <!-- SQL日志级别 -->
     <logger name="org.springframework.jdbc" level="DEBUG" />
-    
+
 </configuration>
