@@ -1,4 +1,4 @@
-package com.gaoyifeng.common.infrastructure;
+package com.gaoyifeng.common.infrastructure.common;
 
 /**
  * @author gaoyifeng

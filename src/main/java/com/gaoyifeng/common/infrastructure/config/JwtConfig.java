@@ -1,4 +1,4 @@
-package com.gaoyifeng.common.config;
+package com.gaoyifeng.common.infrastructure.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

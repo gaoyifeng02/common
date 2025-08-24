@@ -1,6 +1,6 @@
-package com.gaoyifeng.common.infrastructure;
+package com.gaoyifeng.common.infrastructure.util;
 
-import com.gaoyifeng.common.config.JwtConfig;
+import com.gaoyifeng.common.infrastructure.config.JwtConfig;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

@@ -7,3 +7,22 @@ jwt:
   header: "Authorization"
   token-start-with: "Bearer "
   base64-secret: "c3NvSldUU2VjcmV0"
+
+# 日志配置
+logging:
+  level:
+    com.gaoyifeng: DEBUG
+    org.springframework: INFO
+    org.hibernate: INFO
+    org.mybatis: INFO
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+  file:
+    name: ./logs/common.log
+
+# Spring配置
+spring:
+  profiles:
+    active: dev

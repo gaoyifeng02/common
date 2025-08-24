@@ -1,4 +1,4 @@
-package com.gaoyifeng.common.config;
+package com.gaoyifeng.common.infrastructure.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
