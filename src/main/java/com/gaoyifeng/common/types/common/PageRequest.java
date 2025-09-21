@@ -1,4 +1,4 @@
-package com.gaoyifeng.common.infrastructure.common;
+package com.gaoyifeng.common.types.common;
 
 /**
  * 分页请求数据传输对象

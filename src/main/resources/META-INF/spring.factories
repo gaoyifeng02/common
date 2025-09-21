@@ -1,5 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.gaoyifeng.common.infrastructure.config.CorsConfig,\
-com.gaoyifeng.common.infrastructure.config.JwtConfig,\
-com.gaoyifeng.common.infrastructure.config.LogConfig,\
-com.gaoyifeng.common.infrastructure.config.ConfigLoadLogger

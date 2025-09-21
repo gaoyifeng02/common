@@ -1,4 +1,4 @@
-package com.gaoyifeng.common.infrastructure.common;
+package com.gaoyifeng.common.types.common;
 
 import java.io.Serializable;
 import java.util.Objects;
